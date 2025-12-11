@@ -59,8 +59,7 @@ function App() {
     try {
       const base64Image = await convertToBase64(selectedImage);
       
-      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-      const response = await axios.post(`${apiUrl}/analyze`, {
+      const response = await axios.post(`${API_BASE_URL}/analyze`, {
         image_base64: base64Image,
         question: question
       });

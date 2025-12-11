@@ -3,6 +3,11 @@ import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import './App.css';
 
+// Dynamic API URL: Use localhost in development, relative path in production
+const API_BASE_URL = process.env.NODE_ENV === 'production' 
+  ? '' // Empty string means relative to current domain
+  : 'http://localhost:8000';
+
 function App() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);

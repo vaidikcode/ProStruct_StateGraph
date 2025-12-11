@@ -3,9 +3,9 @@ import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import './App.css';
 
-// Dynamic API URL: Use localhost in development, relative path in production
+// eslint-disable-next-line no-unused-vars
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? '' // Empty string means relative to current domain
+  ? '' 
   : 'http://localhost:8000';
 
 function App() {
